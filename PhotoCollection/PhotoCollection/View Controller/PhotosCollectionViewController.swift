@@ -78,9 +78,4 @@ class PhotosCollectionViewController: UICollectionViewController {
             collectionView.backgroundColor = .blue
         }
     }
-    
-    // MARK: Persistence
-    
-   
-
 }
