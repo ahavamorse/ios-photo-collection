@@ -18,6 +18,7 @@
 		6A13B8492448BDE100601386 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13B8482448BDE100601386 /* PhotosCollectionViewController.swift */; };
 		6A13B84B2448BE7C00601386 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13B84A2448BE7C00601386 /* PhotosCollectionViewCell.swift */; };
 		6A13B84E2448C03F00601386 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13B84D2448C03F00601386 /* PhotoDetailViewController.swift */; };
+		6A13B8502448C22400601386 /* ThemeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13B84F2448C22400601386 /* ThemeSelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		6A13B8482448BDE100601386 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		6A13B84A2448BE7C00601386 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		6A13B84D2448C03F00601386 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoDetailViewController.swift; path = "PhotoCollection/View Controller/PhotoDetailViewController.swift"; sourceTree = SOURCE_ROOT; };
+		6A13B84F2448C22400601386 /* ThemeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				6A13B8482448BDE100601386 /* PhotosCollectionViewController.swift */,
 				6A13B84D2448C03F00601386 /* PhotoDetailViewController.swift */,
+				6A13B84F2448C22400601386 /* ThemeSelectionViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				6A13B8492448BDE100601386 /* PhotosCollectionViewController.swift in Sources */,
 				6A13B8472448BB2400601386 /* ThemeHelper.swift in Sources */,
 				6A13B84E2448C03F00601386 /* PhotoDetailViewController.swift in Sources */,
+				6A13B8502448C22400601386 /* ThemeSelectionViewController.swift in Sources */,
 				6A13B82D2448B89000601386 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

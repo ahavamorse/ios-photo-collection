@@ -80,10 +80,14 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="twA-K5-gFb">
-                        <barButtonItem key="leftBarButtonItem" title="Select Theme" id="IE3-fo-54m"/>
+                        <barButtonItem key="leftBarButtonItem" title="Select Theme" id="IE3-fo-54m">
+                            <connections>
+                                <segue destination="fkn-Wh-nv1" kind="presentation" identifier="SelctThemeSegue" id="Xje-NH-agm"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="HbV-us-qeq">
                             <connections>
-                                <segue destination="BDa-b3-IoX" kind="show" identifier="showPhotoDetailSegue" id="gBN-AD-3ty"/>
+                                <segue destination="BDa-b3-IoX" kind="show" identifier="ShowPhotoDetailSegue" id="gBN-AD-3ty"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -136,7 +140,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ik6-Kd-LAL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1510" y="53"/>
+            <point key="canvasLocation" x="1535" y="376"/>
+        </scene>
+        <!--Theme Selection View Controller-->
+        <scene sceneID="pG7-Fp-L0m">
+            <objects>
+                <viewController id="fkn-Wh-nv1" customClass="ThemeSelectionViewController" customModule="PhotoCollection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="44n-aP-Mva">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7s-Rl-Ox2">
+                                <rect key="frame" x="142" y="194" width="130" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKw-hb-HDm">
+                                <rect key="frame" x="137" y="334" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Dark"/>
+                                <connections>
+                                    <action selector="selectDarkTheme:" destination="fkn-Wh-nv1" eventType="touchUpInside" id="Gol-Xr-CRJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5FT-rr-Z3o">
+                                <rect key="frame" x="248" y="334" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Blue"/>
+                                <connections>
+                                    <action selector="selectBlueTheme:" destination="fkn-Wh-nv1" eventType="touchUpInside" id="VEi-Yh-UZS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="uD2-vc-0Re"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ced-8d-FY1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1535" y="-275"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DX9-EE-p1L">
