@@ -47,31 +47,8 @@
                                 <connections>
                                     <outlet property="photoImageView" destination="slh-dq-Sd4" id="UnB-6c-o91"/>
                                     <outlet property="photoTitleLabel" destination="5Uh-Ba-evl" id="FrM-7n-d1h"/>
+                                    <segue destination="BDa-b3-IoX" kind="show" identifier="ShowPhotoDetailSegue" id="t2N-8l-bd4"/>
                                 </connections>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="O79-Ra-1qZ">
-                                <rect key="frame" x="256" y="8" width="150" height="200"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6eF-gR-dur">
-                                    <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1y9-sT-sq3">
-                                <rect key="frame" x="8" y="218" width="150" height="200"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zK6-0R-qkW">
-                                    <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Iq8-xs-lw8">
-                                <rect key="frame" x="256" y="218" width="150" height="200"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mxG-tC-xwV">
-                                    <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -82,12 +59,12 @@
                     <navigationItem key="navigationItem" id="twA-K5-gFb">
                         <barButtonItem key="leftBarButtonItem" title="Select Theme" id="IE3-fo-54m">
                             <connections>
-                                <segue destination="fkn-Wh-nv1" kind="presentation" identifier="SelctThemeSegue" id="Xje-NH-agm"/>
+                                <segue destination="fkn-Wh-nv1" kind="presentation" identifier="SelectThemeSegue" id="Xje-NH-agm"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="HbV-us-qeq">
                             <connections>
-                                <segue destination="BDa-b3-IoX" kind="show" identifier="ShowPhotoDetailSegue" id="gBN-AD-3ty"/>
+                                <segue destination="BDa-b3-IoX" kind="show" identifier="AddPhotoSegue" id="gBN-AD-3ty"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -201,4 +178,7 @@
             <point key="canvasLocation" x="-162.31884057971016" y="52.901785714285715"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gBN-AD-3ty"/>
+    </inferredMetricsTieBreakers>
 </document>
