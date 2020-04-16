@@ -17,11 +17,14 @@ class PhotosCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setTheme()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        setTheme()
         collectionView.reloadData()
     }
     
@@ -29,18 +32,22 @@ class PhotosCollectionViewController: UICollectionViewController {
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let viewController = segue.destination as? PhotoDetailViewController else { return }
-        
         if segue.identifier == "ShowPhotoDetailSegue" {
+            guard let viewController = segue.destination as? PhotoDetailViewController else { return }
+
             guard let indexPathArray = collectionView.indexPathsForSelectedItems else { return }
             viewController.themeHelper = themeHelper
             viewController.photoController = photoController
             viewController.photo = photoController.photos[indexPathArray[0].row]
             
         } else if segue.identifier == "SelectThemeSegue" {
+            guard let viewController = segue.destination as? ThemeSelectionViewController else { return }
+
             viewController.themeHelper = themeHelper
             
         } else if segue.identifier == "AddPhotoSegue" {
+            guard let viewController = segue.destination as? PhotoDetailViewController else { return }
+
             viewController.themeHelper = themeHelper
             viewController.photoController = photoController
         }
@@ -65,22 +72,15 @@ class PhotosCollectionViewController: UICollectionViewController {
 
     func setTheme() {
         guard let theme: String = themeHelper.themePreference else { return }
-        if theme == "Black" {
+        if theme == "Dark" {
             collectionView.backgroundColor = .darkGray
         } else {
             collectionView.backgroundColor = .blue
         }
     }
     
-    // MARK: UICollectionViewDelegate
-    /*
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+    // MARK: Persistence
     
-    }
-    */
+   
 
 }

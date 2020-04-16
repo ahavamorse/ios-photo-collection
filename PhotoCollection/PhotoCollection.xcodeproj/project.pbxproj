@@ -75,6 +75,7 @@
 				6A13B8402448B8F900601386 /* Resources */,
 				6A13B82A2448B89000601386 /* AppDelegate.swift */,
 				6A13B82C2448B89000601386 /* SceneDelegate.swift */,
+				6A13B8462448BB2400601386 /* ThemeHelper.swift */,
 				6A13B8302448B89000601386 /* Main.storyboard */,
 				6A13B8332448B89100601386 /* Assets.xcassets */,
 				6A13B8352448B89100601386 /* LaunchScreen.storyboard */,
@@ -112,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				6A13B8442448B9CD00601386 /* PhotoController.swift */,
-				6A13B8462448BB2400601386 /* ThemeHelper.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
