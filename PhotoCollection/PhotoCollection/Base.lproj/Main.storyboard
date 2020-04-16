@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -80,12 +81,62 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="twA-K5-gFb">
                         <barButtonItem key="leftBarButtonItem" title="Select Theme" id="IE3-fo-54m"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HbV-us-qeq"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HbV-us-qeq">
+                            <connections>
+                                <segue destination="BDa-b3-IoX" kind="show" identifier="showPhotoDetailSegue" id="gBN-AD-3ty"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdL-Xa-ThF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="747.82608695652175" y="52.901785714285715"/>
+        </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="sah-9K-ekt">
+            <objects>
+                <viewController id="BDa-b3-IoX" customClass="PhotoDetailViewController" customModule="PhotoCollection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YYP-wr-Lvk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jZV-bu-oYr">
+                                <rect key="frame" x="95" y="193" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pF-Wh-1Vn">
+                                <rect key="frame" x="179" y="503" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Photo"/>
+                                <connections>
+                                    <action selector="addPhoto:" destination="BDa-b3-IoX" eventType="touchUpInside" id="4ca-Tj-C7L"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BYO-GN-YRI">
+                                <rect key="frame" x="159" y="379" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="HBz-RF-7og"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DJC-kI-6Nm">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="save" id="s1J-R2-r6a">
+                            <connections>
+                                <action selector="savePhoto:" destination="BDa-b3-IoX" id="xaL-pb-dXz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageTitleTextField" destination="BYO-GN-YRI" id="PaK-oS-obr"/>
+                        <outlet property="imageView" destination="jZV-bu-oYr" id="WET-bf-rQX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ik6-Kd-LAL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1510" y="53"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DX9-EE-p1L">
